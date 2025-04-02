@@ -1,6 +1,5 @@
 import "./App.css";
 import styled from "styled-components";
-import logo from "./logo.svg";
 
 function App() {
   const click = () => {
@@ -8,47 +7,27 @@ function App() {
   };
   return (
     <div>
-      <Layout>
-        <a
-          style={{
-            maxWidth: "377px",
-          }}
-          href="/"
-        >
-          <img src={logo} width={252.58} height={64}></img>
+      <div className="header">
+        <a className="logo" href="/">
+          everyuneez 학생복지스토어
         </a>
-        <div>
-          <a
-            style={{ marginRight: 32, lineHeight: "100%", height: "100%" }}
-            href="/검색"
-          >
+        <div className="nav">
+          <a className="nav__search" href="/검색">
             검색
           </a>
-          <a style={{ lineHeight: "88px", height: "88px" }} href="/로그인">
+          <a className="nav__login" href="/로그인">
             로그인
           </a>
+          <a className="nav__my" href="/마이페이지">
+            마이페이지
+          </a>
+          <a className="nav__cart" href="/장바구니">
+            장바구니
+          </a>
         </div>
-      </Layout>
+      </div>
     </div>
   );
 }
 
 export default App;
-
-const Layout = styled.div`
-  height: 88px;
-  margin: 0 auto;
-  display: flex;
-  font-size: 13px;
-  color: #787a87;
-  justify-content: space-between;
-  width: 80.625%;
-  max-width: 1032px;
-
-  @media screen and (max-width: 768px) {
-    height: 64px;
-    margin: 0 16px;
-  }
-`;
-
-const styledInput = styled.input``;

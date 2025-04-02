@@ -2,6 +2,88 @@
   text-align: center;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 88px;
+  max-width: 1032px;
+  border-bottom: 1px solid #ecedf1;
+  margin: 0 auto;
+  width: calc(100% - 64px);
+  color: #787a87;
+}
+
+.logo {
+  display: block;
+  max-width: 377px;
+  width: 281px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("https://static.univstore.com/web/image/logo.png");
+  cursor: pointer;
+  text-indent: -9999px;
+  line-height: 88px;
+}
+
+.nav {
+  display: flex;
+}
+.nav__search,
+.nav__login {
+  display: block;
+  line-height: 88px;
+  height: 88px;
+  margin-right: 32px;
+  font-size: 13px;
+}
+
+.nav__my,
+.nav__cart {
+  display: none;
+}
+
+.nav__login {
+  margin-right: 0;
+}
+
 @media screen and (max-width: 768px) {
-  
+  .header {
+    height: 64px;
+    width: calc(100% - 32px);
+    margin: 0 auto;
+  }
+  .logo {
+    width: 252.58px;
+  }
+
+  .nav__search,
+  .nav__login,
+  .nav__my,
+  .nav__cart {
+    display: block;
+    width: 36px;
+    height: 36px;
+    margin: 14px 0;
+    text-indent: -9999px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .nav__search {
+    background-image: url("https://static.univstore.com/web/image/ic-search-item.png");
+  }
+  .nav__login {
+    display: none;
+    margin: 0;
+  }
+  .nav__my {
+    background-image: url("https://static.univstore.com/web/image/ic-mypage.png");
+  }
+  .nav__cart {
+    /* margin-right: 0; */
+    background-image: url("https://static.univstore.com/web/image/ic-shoppingbag.png");
+  }
 }
