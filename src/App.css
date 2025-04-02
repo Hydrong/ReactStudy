@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
@@ -9,7 +13,7 @@
   margin: 0 auto;
 }
 
-.header-wrapper {
+.header-container {
   border-bottom: 1px solid #ecedf1;
 }
 
@@ -37,6 +41,7 @@
 .nav {
   display: flex;
 }
+
 .nav__search,
 .nav__login {
   display: block;
@@ -56,17 +61,25 @@
 }
 
 /* 드롭다운바 */
+.dropdown-container {
+  border-bottom: 1px solid #ecedf1;
+}
+
 .dropdown-bar {
   display: flex;
   justify-content: space-between;
+  height: 60px;
 }
+
 .dropdown-bar__dropdown-item-container {
   display: flex;
   margin-left: -12px;
 }
+
 .dropdown-bar__dropdown-item:hover {
   color: #fd4d57;
 }
+
 .dropdown-bar__item {
   color: #222;
   cursor: pointer;
@@ -75,30 +88,66 @@
   font-weight: 700;
   padding: 21px 12px;
 }
+
 .dropdown-bar__normal-item-container {
   display: flex;
+}
+
+.dropdown-bar__normal-item-container > div {
+  margin-left: 4px;
+}
+
+.dropdown-bar__normal-item-container:last-child {
   margin-right: -12px;
 }
 
-.dropdown-menu {
+.dropdown-categories-wrapper {
   display: flex;
+  justify-content: center;
 }
 
-.dropdown-menu__category {
+.dropdown-categories {
+  display: flex;
+  background-color: #fff;
+  position: absolute;
+  height: 274px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  border-top: 1px solid #ecedf1;
+  z-index: 1000;
+  width: calc(80.625% + 32px);
+  max-width: 1064px;
+}
+
+.dropdown-category {
+  display: flex;
+  width: 100%;
+  color: #222;
+}
+
+.dropdown-item {
   width: 12.5%;
   margin: 16px 0;
   padding: 0 14px;
-  box-sizing: border-box;
+  border-right: 1px solid #ecedf1;
 }
 
-.dropdown-menu__category__title {
+.dropdown-item:first-child {
+  padding-left: 16px;
+}
+
+.dropdown-item__title {
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: 13px;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding-bottom: 8px;
+  height: 23.59px;
 }
 
-.dropdown-menu__category__title::after {
+.dropdown-item__title::after {
   background-image: url(https://www.univstore.com/image/ic-arrow-forward-mini.png);
   background-repeat: no-repeat;
   background-position: 0px 0px;
@@ -114,7 +163,7 @@
   overflow: clip;
 }
 
-.dropdown-menu__item {
+.dropdown-item__item {
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -125,11 +174,19 @@
   cursor: pointer;
 }
 
+/* 콘텐츠 */
+.main-banner {
+  background-color: aquamarine;
+  height: 516px;
+  transition: background-color linear 300ms;
+}
+
 @media screen and (max-width: 768px) {
   .template {
     height: 64px;
     width: calc(100% - 32px);
   }
+
   /* .header {
     height: 64px;
     width: calc(100% - 32px);
@@ -156,13 +213,16 @@
   .nav__search {
     background-image: url("https://static.univstore.com/web/image/ic-search-item.png");
   }
+
   .nav__login {
     display: none;
     margin: 0;
   }
+
   .nav__my {
     background-image: url("https://static.univstore.com/web/image/ic-mypage.png");
   }
+
   .nav__cart {
     /* margin-right: 0; */
     background-image: url("https://static.univstore.com/web/image/ic-shoppingbag.png");
