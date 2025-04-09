@@ -1,0 +1,67 @@
+.slider-wrapper {
+    transition: background-color linear 300ms;
+    background-color: aquamarine;
+    height: 516px;
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+}
+
+.slider-item {
+    display: block;
+    position: relative;
+    transition: all 300ms;
+}
+
+.slider-left-button {
+    display: flex;
+    position: absolute;
+    left: 0px;
+    top: 0;
+    height: 100%;
+    width: 48px;
+    background: url("https://www.univstore.com/image/ic-arrow-forward-black.png");
+    rotate: 180deg;
+    background-size: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-x: 16px;
+}
+
+.slider-right-button {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    height: 100%;
+    width: 48px;
+    background: url("https://www.univstore.com/image/ic-arrow-forward-black.png");
+    /* rotate: 180deg; */
+    background-size: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-x: 16px;
+}
+
+.slider-dot-wrapper {
+    display: flex;
+    gap: 8px;
+    position: absolute;
+    width: 100%;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    bottom: 0px;
+}
+
+.slider-dot {
+    background-color: #000;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    opacity: .2;
+}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Slider from "./Slider";
 
 function DropdownItem({ title, items }) {
   return (
@@ -462,7 +463,7 @@ function App() {
         ) : null}
       </div>
       <div className="content-container">
-        <div className="main-banner"></div>
+        <Slider />
       </div>
       <div className="footer-container"></div>
     </div>
